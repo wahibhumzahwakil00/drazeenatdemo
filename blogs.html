@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog Page</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+    }
+
+    header {
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      padding: 10px;
+    }
+
+    main {
+      max-width: 800px;
+      margin: 20px auto;
+      padding: 20px;
+      background-color: #fff;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .blog {
+      margin-bottom: 20px;
+    }
+
+    .blog h2 {
+      color: #333;
+    }
+
+    .blog p {
+      color: #555;
+    }
+
+    .read-more-btn {
+      display: inline-block;
+      padding: 8px 16px;
+      background-color: #333;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+    }
+
+    .read-more-btn:hover {
+      background-color: #555;
+    }
+
+    .full-blog {
+      display: none;
+    }
+
+    .full-blog.active {
+      display: block;
+    }
+
+    .full-blog img {
+      max-width: 100%;
+      height: auto;
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>My Blog</h1>
+  </header>
+
+  <main>
+    <div class="blog" id="blog1">
+      <h2>Blog Title 1</h2>
+      <p>Short description of the blog content (200-300 words).</p>
+      <a href="#" class="read-more-btn" onclick="toggleFullBlog('blog1')">Read More</a>
+      <div class="full-blog" id="full-blog1">
+        <p>Full blog content with 3-4 images (1500-2500 words).</p>
+        <img src="image1.jpg" alt="Image 1">
+        <img src="image2.jpg" alt="Image 2">
+        <img src="image3.jpg" alt="Image 3">
+        <!-- Add more images as needed -->
+      </div>
+    </div>
+
+    <!-- Repeat the above structure for additional blogs -->
+
+  </main>
+
+  <script>
+    function toggleFullBlog(blogId) {
+      var fullBlog = document.getElementById('full-' + blogId);
+      fullBlog.classList.toggle('active');
+    }
+  </script>
+</body>
+</html>

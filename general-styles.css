@@ -1,0 +1,177 @@
+/*----------*----------*----------*----------*---------- Fonts */
+
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&family=Plus+Jakarta+Sans:wght@200;300;400;500;600;700;800&display=swap");
+
+/*----------*----------*----------*----------*---------- Reset */
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+
+:root{
+  font-size: 10px;
+
+  /*----------*----------*----------* Website Theme */
+  --color-primary: #5353A9;
+
+  --color-secondary: #FF8300;
+
+
+  --color-tertiary: #FFF;
+
+  --color-quaternary: #8ACDD7;
+
+  --color-quaternary-2: #749397;
+
+  --color-quinary: #F9F9E0;
+
+  --color-quinary-2: #FBE0E9;
+
+  /*----------*----------*----------* Padding */
+  /* 
+        --------------------- Sizing Nature
+        d     = dynamic
+        st    = static
+
+        --------------------- Sizing
+
+        l     = large
+        m     = medium
+        s     = small
+        xs    = extra small
+        c     = customized
+
+          
+        --------------------- Orientation
+        v  = vertical   (top & bottom)
+        h  = horizontal (right & left)
+  */
+
+  /* Dynamic */
+  --padding-d-l-v: calc(2rem + 12vh);
+  --padding-d-l-h: calc(2rem + 12vw);
+
+  --padding-d-mc-v: calc(1rem + 4vh);
+  --padding-d-mc-h: calc(1rem + 4vw);
+
+  --padding-d-m-v: calc(1rem + 2vh);
+  --padding-d-m-h: calc(1rem + 2vw);
+
+  --padding-d-s-h: calc(1rem + 1vw);
+  --padding-d-s-v: calc(1rem + 1vh);
+
+  /* Static */
+  --padding-st-l-h: 3rem;
+  --padding-st-l-v: 2rem;
+
+  --padding-st-m-h: 2.5rem;
+  --padding-st-m-v: 1.5rem;
+
+  --padding-st-s-h: 2rem;
+  --padding-st-s-v: 1rem;
+
+  /*----------*----------*----------* Typography */
+
+  /* 
+      --------------------- Sizing Nature
+      d     = dynamic
+      st    = static
+      
+      --------------------- Sizing
+      xl    = extra large
+      l     = large
+      m     = medium
+      s     = small
+      xs    = extra small
+      c     = customized
+      
+      --------------------- Family
+      font-family: 'Oswald', sans-serif;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+*/
+
+  /* Dynmaic */
+  --font-size-d-lc: calc(3rem + 3.5vw);
+  --font-size-d-l: calc(2rem + 3vw);
+  --font-size-d-mc: calc(2rem + 2.5vw);
+  --font-size-d-m: calc(1rem + 2vw);
+  --font-size-d-sc: calc(1rem + 1.5vw);
+  --font-size-d-s: calc(1rem + 1vw);
+
+  /* Static */
+  --font-size-st-xl: 4.2rem;
+  --font-size-st-lc: 3.75rem;
+  --font-size-st-l: 3.2rem;
+  --font-size-st-mc: 2.65rem;
+  --font-size-st-m: 2.25rem;
+  --font-size-st-n: 1.9rem;
+  --font-size-st-sc: 1.75rem;
+  --font-size-st-s: 1.5rem;
+
+  /* Family */
+  --font-family-primary: "Oswald", sans-serif;
+  --font-family-secondary: "Plus Jakarta Sans", sans-serif;
+  --font-family-tertiary: 'Caveat', cursive;
+}
+
+body {
+  background-color: var(--color-primary);
+  font-family: var(--font-family-content);
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  border-radius: 1rem;
+}
+
+li {
+  list-style: none;
+}
+
+img{
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+  object-position: center;
+}
+
+/*----------*----------*----------*----------*---------- Utility Classes */
+
+/*----------*----------*----------* Section Padding */
+.zs--section__padding {
+  padding: var(--padding-d-l-v) var(--padding-d-l-h);
+}
+
+/*----------*----------*----------* Section Title */
+.zs--section__title {
+  font-size: var(--font-size-d-sc);
+  font-weight: 900;
+}
+
+/*----------*----------*----------* Section Para */
+.zs--section__para {
+  font-size: var(--font-size-st-sc);
+  color: var(--color-quaternary);
+}
+
+/*----------*----------*----------*----------*---------- Overall Layout */
+
+.zs--container {
+  display: grid;
+  grid-template-columns:
+    [container-start] repeat(12, minmax(min-content, 12.5rem))
+    [container-end];
+
+  grid-template-rows: repeat(9, min-content);
+  justify-content: center;
+}
+
+.zs--overall-layout {
+  grid-column: container-start / container-end;
+}
+

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DR. Zeenat Ahmed</title>
+    <link rel="stylesheet" href="general-styles.css">
+    <link rel="stylesheet" href="styles.css">
+    <script src="form.js"></script>
+</head>
+<body class="zs--overall-layout">
+    <header class="zs--navbar">
+        <nav class="zs--navbar__links-1">
+            <a href="index.html" class="zs--navbar__link">Home</a>
+        </nav>
+
+    </header>
+
+    <section class="zs--appointment zs--section__padding">
+        <form action="#" method="post">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="age">Age:</label>
+            <input type="number" id="age" name="age" required>
+
+            <label for="sex">Sex:</label>
+            <select id="sex" name="sex" required>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other">Other</option>
+            </select>
+
+            <label for="name">Phone:</label>
+            <input type="text" id="phone" name="phone" required>
+
+            <label for="name">email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="clinic">Clinic:</label>
+            <select id="clinic" name="clinic" required>
+                <option value="vishwasth">Primacare</option>
+                <option value="primacare">Vishwasth</option>
+            </select>
+
+            <label for="date">Date for Booking Appointment:</label>
+            <input type="date" id="date" name="date" required>
+
+            <label for="timeslot">Time Slot:</label>
+            <input type="time" id="timeslot" name="timeslot" required>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+
+            <button type="submit" onclick="whatsapp()"><a class="submit_link" href="index.html">SUBMIT</a></button>
+        </form>
+    </section>
+
+    <footer class="zs--footer">
+    <div class="zs--footer-container">
+        <div class="zs--footer-section">
+            <h3 class="zs--footer-section-title">Usefull Links</h3>
+            <ul class="zs--footer-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#zs--services">Services</a></li>
+        </div>
+
+
+        <div class="zs--footer-section">
+            <h3 class="zs--footer-section-title">Follow Us</h3>
+            <ul class="zs--social-links">
+                <li><a href="https://www.instagram.com/dr_a_zeenat?igsh=ZWU2d2k1NmVnZzhh&utm_source=qr" target="_blank"><i class="fab fa-instagram"></i>Instagram</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="zs--footer-bottom-form">
+        <p>&copy; Copyright All rights reserved. Dr. A Zeenat Ahmed | Desgined and developed by <a class="developer-link" href="https://wahibhumzahwakil00.github.io/zartajsoloutions/">Zartaj Solutions</a></p>
+    </div>
+
+    </footer>
+</body>
+</html>

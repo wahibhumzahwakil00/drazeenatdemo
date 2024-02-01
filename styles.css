@@ -1,0 +1,620 @@
+
+/* Header Styles */
+.zs--navbar {
+  position: sticky;
+  top: 0;
+  background-color: var(--color-primary);
+  padding: var(--padding-d-s-v) var(--padding-d-l-h);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 100;
+}
+
+.zs--navbar__links {
+  display: flex;
+  gap: var(--padding-d-s-h);
+}
+
+.zs--navbar__link {
+  font-size: var(--font-size-st-m);
+  color: var(--color-tertiary);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.zs--navbar__link:hover {
+  color: var(--color-quaternary);
+}
+
+.zs--navbar__get-appointment {
+  font-size: var(--font-size-st-m);
+  color: var(--color-tertiary);
+  background-color: var(--color-secondary);
+  text-decoration: none;
+  padding: var(--padding-st-s-v) var(--padding-st-m-h);
+  border: 2px solid var(--color-tertiary);
+  border-radius: 1rem;
+  transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.zs--navbar__get-appointment:hover {
+  color: var(--color-secondary);
+  background-color: var(--color-tertiary);
+  border-color: var(--color-secondary);
+}
+
+@media screen and (max-width: 768px) {
+  .zs--navbar {
+    flex-direction: column;
+    padding: var(--padding-st-s-v) var(--padding-st-s-h);
+  }
+
+  .zs--navbar__links {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .zs--navbar__link,
+  .zs--navbar__get-appointment {
+    font-size: var(--font-size-st-s);
+  }
+
+  .zs--navbar__link {
+    margin-bottom: 1rem;
+  }
+
+  .zs--navbar__burger-icon {
+    display: block;
+    cursor: pointer;
+  }
+
+  .zs--navbar__links {
+    display: none;
+  }
+
+  .zs--navbar__links-1 {
+    display: inline;
+  }
+
+  .zs--navbar__get-appointment {
+    order: -1;
+  }
+}
+
+/* Hero Styles */
+.zs--hero {
+  position: relative;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  overflow: hidden;
+  background-color: var(--color-tertiary);
+  padding-top: var(--padding-d-s-h);
+}
+
+.zs--doctor-info,
+.zs--doctor__img {
+  flex-basis: 50%;
+}
+
+.zs--doctor-info h1,
+.zs--doctor-info h2,
+.zs--doctor-info p {
+  color: var(--color-secondary);
+  margin-bottom: 1rem;
+}
+
+.zs--doctor-info p {
+  color: var(--color-quaternary-2);
+}
+
+.zs--doctor-info h1 {
+  font-size: var(--font-size-st-lc);
+}
+
+.zs--doctor-info h2 {
+  font-size: var(--font-size-st-mc);
+}
+
+.zs--doctor-info p {
+  font-size: var(--font-size-st-sc);
+}
+
+.zs--doctor__img {
+  display: flex;
+  justify-content: flex-end;
+  position: relative;
+}
+
+.zs--doctor__img::before,
+.zs--doctor__img::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+}
+
+.zs--doctor__img::before {
+  top: -7%;
+  left: 14%;
+  width: 50%;
+  height: 50%;
+  background-image: url("J:\Zartaj Solutions\Client-projects\MANSHA BHABHI\Project\dot.png");
+}
+
+.zs--doctor__img::after {
+  top: 5%;
+  right: -5%;
+  height: 100%;
+  width: 80%;
+  background-color: var(--color-secondary);
+}
+
+.zs--doctor__img img {
+  height: 40rem;
+  width: 40rem;
+  object-fit: cover;
+  transition: all 0.25s ease-in-out;
+}
+
+.zs--doctor__img:hover img {
+  transform: scale(0.95);
+}
+
+.designation {
+  color: var(--color-primary);
+  text-align: center;
+}
+
+.designation > h6,
+.designation > p {
+  font-size: var(--font-size-st-n);
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 980px) {
+  .zs--hero {
+    flex-direction: column-reverse;
+    align-items: stretch;
+  }
+
+  .zs--doctor-info__name,
+  .zs--doctor-info__designation {
+    display: none;
+  }
+
+  .zs--doctor-info,
+  .zs--doctor__img {
+    flex-basis: 100%;
+    margin: auto;
+  }
+
+  .zs--doctor__img::before {
+    top: -7%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    height: 40%;
+  }
+
+  .zs--doctor__img::after {
+    top: 5%;
+    right: 0;
+    width: 100%;
+  }
+
+  .zs--doctor__img img {
+    height: auto;
+    width: 100%;
+    margin-top: var(--padding-d-m-h);
+  }
+
+  .designation > p {
+    margin-bottom: 1.5rem;
+  }
+
+  .designation > h6 {
+    margin-top: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 780px) {
+  .zs--hero {
+    text-align: center;
+  }
+}
+
+/* Services Styles */
+.zs--services {
+  background-color: var(--color-quinary);
+  text-align: center;
+}
+
+.zs--services_head {
+  font-size: var(--font-size-d-sc);
+  color: var(--color-primary);
+  margin-bottom: var(--padding-st-s-v);
+}
+
+.zs--services__container-card {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.zs--services__card {
+  background-color: var(--color-tertiary);
+  border-radius: 1rem;
+  box-shadow: 0 0 2rem #0000001a;
+  padding: 3rem;
+  margin: 2rem;
+  width: 30rem;
+  transition: transform 0.3s ease-in-out;
+}
+
+.zs--services__card:hover {
+  transform: scale(1.05);
+}
+
+.zs--services__card--head {
+  color: var(--color-primary);
+  font-size: var(--font-size-st-m);
+  margin-bottom: 2rem;
+}
+
+.zs--services__card--desc,
+.zs--services__card--desc ul,
+.zs--services__card--desc li,
+.zs--services__card--desc li span {
+  color: var(--color-quaternary-2);
+}
+
+.zs--services__card--desc {
+  font-size: var(--font-size-st-n);
+  line-height: 1.5;
+}
+
+.zs--services__card--desc ul {
+  list-style: none;
+  padding-left: 2rem;
+}
+
+.zs--services__card--desc li {
+  margin-bottom: 1rem;
+}
+
+.zs--services__card--desc li span {
+  color: #4caf50;
+  margin-right: 0.5rem;
+}
+
+.zs--srviveces__card-fig,
+.zs--srviveces__card-fig_img {
+  height: 15rem;
+  margin-bottom: 1rem;
+}
+
+.zs--srviveces__card-fig_img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+  border-top-left-radius: 0.75rem;
+  border-bottom-right-radius: 0.75rem;
+}
+
+/* Testimonials Styles */
+.zs--testimonials {
+  display: flex;
+  flex-direction: column;
+  gap: 6rem;
+  text-align: center;
+  background-color: var(--color-quinary-2);
+}
+
+.zs--testimonials_head {
+  color: var(--color-primary);
+  font-size: var(--font-size-d-s);
+}
+
+.zs--testimonials_container {
+  display: flex;
+  justify-content: center;
+  gap: 1.25rem;
+  flex-wrap: wrap;
+}
+
+.zs--testimonials--card {
+  width: 30rem;
+  border: 2px solid var(--color-primary);
+  margin: 2rem;
+  padding: 2rem;
+  text-align: center;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  background-color: var(--color-tertiary);
+  transition: transform 0.3s ease-in-out;
+  border-radius: 0.85rem;
+}
+
+.zs--testimonials--card:hover {
+  transform: scale(1.55);
+}
+
+.zs--testimonials--card__image img {
+  width: 15rem;
+  height: 15rem;
+  border-radius: 50%;
+  border: 4px solid var(--color-primary);
+}
+
+.zs--testimonials--card__name {
+  font-size: var(--font-size-st-n);
+  color: var(--color-secondary);
+  margin: 1rem 0;
+}
+
+.zs--testimonials--card__massage {
+  font-size: var(--font-size-st-s);
+  color: var(--color-quaternary-2);
+  line-height: 1.5;
+}
+
+@media screen and (max-width: 768px) {
+  .zs--testimonials {
+    gap: 3rem;
+  }
+
+  .zs--testimonials--card {
+    width: 100%;
+    margin: 1rem 0;
+  }
+}
+
+/* Footer Styles */
+.zs--footer {
+  background-color: var(--color-primary);
+  color: var(--color-tertiary);
+  padding: 4rem 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.zs--footer-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.zs--footer-section {
+  flex-basis: 35rem;
+  padding: 2rem;
+}
+
+.zs--footer-section-title {
+  font-size: var(--font-size-st-m);
+  margin-bottom: 1rem;
+}
+
+.zs--footer-links,
+.zs--social-links {
+  list-style: none;
+  padding: 0;
+}
+
+.zs--footer-links li,
+.zs--social-links li {
+  margin-bottom: 10px;
+}
+
+.zs--footer-links a,
+.zs--social-links a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+}
+
+.zs--footer-links a:hover,
+.zs--social-links a:hover {
+  text-decoration: underline;
+}
+
+.zs--footer-bottom {
+  background-color: #444;
+  text-align: center;
+  padding: 10px 0;
+  color: #fff;
+  margin-bottom: 7.2rem;
+}
+
+.zs--footer-reveiew-section {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  align-items: center;
+}
+
+.zs--footer-review-section-title {
+  color: var(--color-tertiary);
+  font-size: var(--font-size-st-m);
+  text-align: center;
+}
+
+.zs--footer-review-container {
+  position: fixed;
+  bottom: 0.25rem;
+  background-color: var(--color-primary);
+  padding: 1.8rem 1.5rem;
+  border-radius: 0.9rem;
+}
+
+.zs--footer-review-desc {
+  font-size: var(--font-size-st-sc);
+  font-weight: lighter;
+}
+
+.zs--footer-review-author {
+  font-size: var(--font-size-st-s);
+}
+
+/* Contact Styles */
+.zs--contact {
+  background-color: var(--color-quinary);
+  color: var(--color-primary);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.zs--contact__head {
+  font-size: var(--font-size-st-mc);
+}
+
+.zs--contact__email,
+.zs--contact__phone,
+.zs--contact__location {
+  font-size: var(--font-size-st-m);
+}
+
+.zs--contact__location-link {
+  text-decoration: none;
+  color: var(--color-tertiary);
+}
+
+/* Footer Form Styles */
+.zs--footer-bottom-form {
+  margin-bottom: 0;
+  background-color: #444;
+  text-align: center;
+  padding: 10px 0;
+  color: #fff;
+}
+
+.submit_link {
+  color: var(--color-tertiary);
+}
+
+.developer-link {
+  font-weight: bolder;
+  color: var(--color-tertiary);
+}
+
+
+
+/* Clinic Section Styles */
+.zs--clinic {
+  background-color: var(--color-quinary-2);
+  display: flex;
+  flex-direction: column;
+  gap: 3.5rem;
+}
+
+.zs--clinic_head {
+  color: var(--color-primary);
+  font-size: var(--font-size-d-sc);
+  align-self: center;
+  text-align: center;
+}
+
+.zs--clinic_container {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  text-align: center;
+  gap: 2.5rem;
+}
+
+/* Style the clinic cards with Flexbox */
+.zs--clinic-card {
+  flex: 1;
+  background-color: var(--color-tertiary);
+  border-radius: 1rem;
+  box-shadow: 0 0 2rem rgba(0, 0, 0, 0.1);
+  padding: 3rem;
+  margin: 2rem;
+  max-width: 30rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Style the clinic card name */
+.zs--clinic-card-name {
+  color: var(--color-primary);
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+/* Style the clinic card address */
+.zs--clinic-card-address,
+.zs--clinic-card-phone {
+  color: var(--color-quaternary-2);
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+}
+
+/* Style the clinic card directions link */
+.zs--clinic-card-clkToOpenMaps {
+  margin-top: auto;
+  display: inline-block;
+  background-color: var(--color-secondary);
+  color: var(--color-tertiary);
+  padding: 1rem 2rem;
+  border-radius: 0.5rem;
+  transition: background-color 0.3s ease;
+}
+
+/* Hover effect for the directions link */
+.zs--clinic-card-clkToOpenMaps:hover {
+  background-color: var(--color-primary);
+}
+
+@media screen and (max-width: 680px) {
+  .zs--clinic_container {
+    flex-direction: column;
+  }
+
+  .zs--footer-bottom {
+    margin-bottom: 8.5rem;
+  }
+}
+
+@media screen and (max-width: 720px) {
+  .zs--footer-review-author,
+  .zs--footer-review-desc,
+  .zs--contact__email,
+  .zs--contact__phone,
+  .zs--testimonials--card__massage,
+  .zs--services__card--desc,
+  .zs--doctor-info__summary,
+  .zs--navbar__get-appointment {
+    font-size: 2.3rem;
+  }
+
+  .designation h6,
+  .zs--services__card--head,
+  .zs--testimonials--card__name,
+  .zs--contact__head,
+  .zs--clinic-card-name{
+    font-size: 2.75rem;
+  }
+
+  .zs--testimonials_head,
+  .zs--clinic_head,
+  .zs--services_head {
+    font-size: 3rem;
+  }
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 680px) {
+  .zs--clinic_container {
+    flex-direction: column;
+  }
+
+  .zs--footer-bottom {
+    margin-bottom: 14rem;
+  }
+}
