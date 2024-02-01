@@ -580,6 +580,65 @@
     margin-bottom: 8.5rem;
   }
 }
+/* Form Styles */
+.zs--appointment {
+  background-color: var(--color-quinary-2);
+}
+
+form {
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: var(--font-size-st-s);
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 16px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button {
+  background-color: var(--color-secondary);
+  color: #fff;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100%;
+}
+
+button:hover {
+  background-color: #F38714;
+}
+
+.zs--footer-bottom-form {
+  margin-bottom: 0;
+  background-color: #444;
+  text-align: center;
+  padding: 10px 0;
+  color: #fff;
+}
+
+.submit_link {
+  color: var(--color-tertiary);
+}
+
+.developer-link {
+  font-weight: bolder;
+  color: var(--color-tertiary);
+}
 
 @media screen and (max-width: 720px) {
   .zs--footer-review-author,
@@ -596,8 +655,7 @@
   .designation h6,
   .zs--services__card--head,
   .zs--testimonials--card__name,
-  .zs--contact__head,
-  .zs--clinic-card-name{
+  .zs--contact__head {
     font-size: 2.75rem;
   }
 
@@ -606,15 +664,8 @@
   .zs--services_head {
     font-size: 3rem;
   }
-}
-
-/* Responsive Styles */
-@media screen and (max-width: 680px) {
-  .zs--clinic_container {
-    flex-direction: column;
-  }
 
   .zs--footer-bottom {
-    margin-bottom: 14rem;
+    margin-bottom: 13.5rem;
   }
 }
